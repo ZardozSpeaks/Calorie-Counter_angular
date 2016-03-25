@@ -29,7 +29,9 @@ import { MealSelectComponent } from './meal-select.component';
   </meal-select>
   <edit-meal-details *ngIf="mealToEdit" [meal]="mealToEdit">
   </edit-meal-details>
-  <button class="btn btn-warning" *ngIf="mealToEdit" (click)="editToggle()">Done</button>
+  <div class="done">
+    <button class="btn btn-warning" *ngIf="mealToEdit" (click)="editToggle()">Done</button>
+  </div>
   <new-meal (onSubmitNewMeal)="pushMeal($event)"></new-meal>
   `
 })
